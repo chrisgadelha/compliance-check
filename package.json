@@ -1,0 +1,16 @@
+{
+  "name": "compliance-check",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/react-app",
+    "packages/hardhat"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/react-app",
+    "build": "npm run build --workspace=packages/react-app",
+    "compile": "npm run compile --workspace=packages/hardhat",
+    "deploy:sepolia": "npm run deploy:sepolia --workspace=packages/hardhat",
+    "deploy:mainnet": "npm run deploy:mainnet --workspace=packages/hardhat"
+  }
+}

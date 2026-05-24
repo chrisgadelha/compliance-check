@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.celoscan.io/api?module=contract&action=getabi&address=0x3f4423BF43d7C3982612084c3dFd347d8Cc61309&apikey=I6ISTRVB21MYB368Q7UX4UU73XVCQ14VQF\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('status:', d['status'], '| message:', d['message']\\)\")",
+      "Bash(curl -s \"https://api.celoscan.io/api?module=account&action=balance&address=0x3f4423BF43d7C3982612084c3dFd347d8Cc61309&apikey=I6ISTRVB21MYB368Q7UX4UU73XVCQ14VQF\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d\\)\")",
+      "Bash(curl -s \"https://api-sepolia.celoscan.io/api?module=account&action=txlist&address=0x3f4423BF43d7C3982612084c3dFd347d8Cc61309&apikey=I6ISTRVB21MYB368Q7UX4UU73XVCQ14VQF\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('status:', d['status'], '| message:', d['message'], '| txs:', len\\(d['result']\\) if isinstance\\(d['result'], list\\) else d['result']\\)\")",
+      "Bash(curl -s \"https://api.etherscan.io/v2/api?chainid=42220&module=account&action=txlist&address=0x3f4423BF43d7C3982612084c3dFd347d8Cc61309&apikey=I6ISTRVB21MYB368Q7UX4UU73XVCQ14VQF\")",
+      "Bash(curl -s \"https://api.etherscan.io/v2/api?chainid=11142220&module=account&action=txlist&address=0x3f4423BF43d7C3982612084c3dFd347d8Cc61309&apikey=I6ISTRVB21MYB368Q7UX4UU73XVCQ14VQF\")"
+    ]
+  }
+}
