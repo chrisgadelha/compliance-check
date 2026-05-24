@@ -1,6 +1,12 @@
 import { createPublicClient, createWalletClient, custom, http } from "viem";
 import { celo } from "viem/chains";
 
+declare global {
+  interface Window {
+    ethereum?: Record<string, unknown>;
+  }
+}
+
 /**
  * Read-only client backed by Celo Mainnet's public forno RPC.
  * Used for: readContract (totalChecks), any off-wallet queries.
