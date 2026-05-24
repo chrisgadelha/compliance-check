@@ -1,9 +1,10 @@
 import { createPublicClient, createWalletClient, custom, http } from "viem";
+import type { EIP1193Provider } from "viem";
 import { celo } from "viem/chains";
 
 declare global {
   interface Window {
-    ethereum?: Record<string, unknown>;
+    ethereum?: EIP1193Provider;
   }
 }
 
